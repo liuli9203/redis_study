@@ -1,1 +1,0 @@
- -LD:/Projects/CLion/redis_study/deps/linenoise  -LD:/Projects/CLion/redis_study/deps/lua/src  -LD:/Projects/CLion/redis_study/deps/hiredis -lpthread -lm deps/lua/liblua.a deps/linenoise/liblinenoise.a deps/hiredis/libhiredis.a -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 

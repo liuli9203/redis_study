@@ -1,2 +1,0 @@
-D:\PROGRA~1\mingw64\bin\ar.exe qc libhiredis.a  CMakeFiles/hiredis.dir/hiredis.c.obj CMakeFiles/hiredis.dir/net.c.obj CMakeFiles/hiredis.dir/dict.c.obj CMakeFiles/hiredis.dir/sds.c.obj CMakeFiles/hiredis.dir/async.c.obj CMakeFiles/hiredis.dir/read.c.obj
-D:\PROGRA~1\mingw64\bin\ranlib.exe libhiredis.a
