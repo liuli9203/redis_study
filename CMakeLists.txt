@@ -11,7 +11,10 @@ set(SRC_SERVER_TMP
         src/adlist.c
         src/ae.c
         src/anet.c
-        src/ae_kqueue.c
+        # for mac
+        # src/ae_kqueue.c
+        # for linux epoll or select
+        src/ae_select.c
         src/dict.c
         src/sds.c
         src/zmalloc.c
@@ -91,6 +94,9 @@ set(SRC_CLI
         src/anet.c
         src/ae.c
         src/crc64.c
+        src/crc16.c #
+        src/dict.c #
+        src/siphash.c #
         )
 
 
@@ -107,7 +113,9 @@ target_link_libraries(redis-server
         PRIVATE m
         PRIVATE lua
         PRIVATE linenoise
-        PRIVATE hiredis)
+        PRIVATE hiredis
+        # cmake needs to be told to link with the DL libs, using ${CMAKE_DL_LIBS}
+        ${CMAKE_DL_LIBS})
 
 
 add_executable(redis-cli ${SRC_CLI})
@@ -121,4 +129,5 @@ target_link_libraries(redis-cli
         PRIVATE m
         PRIVATE linenoise
         PRIVATE hiredis
-        )
+        # cmake needs to be told to link with the DL libs, using ${CMAKE_DL_LIBS}
+        ${CMAKE_DL_LIBS})
